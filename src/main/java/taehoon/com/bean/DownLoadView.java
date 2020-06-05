@@ -1,4 +1,4 @@
-package taehoon.com.Bean;
+package taehoon.com.bean;
 
 import java.io.File;
 import java.io.FileInputStream;

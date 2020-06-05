@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/sexy/gogo.vip">test1</a>
+<h1>${sexy }</h1>
 </body>
 </html>

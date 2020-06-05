@@ -64,13 +64,13 @@
 	  </tx:attributes>
 	</tx:advice>
 	<aop:config>
-	  <aop:advisor advice-ref="txAdvice" pointcut="execution(public * sist.com.dao.*.*(..))"/>
+	  <aop:advisor advice-ref="txAdvice" pointcut="execution(public * taehoon.com.dao.*.*(..))"/>
 	</aop:config>
 	<beans:bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
 	    <beans:property value="UTF-8" name="defaultEncoding"/>
 	    <beans:property value="3000000000" name="maxUploadSize"/>
     </beans:bean>
-	<beans:bean id="download" class="taehoon.com.Bean.DownLoadView"></beans:bean>
+	<beans:bean id="download" class="taehoon.com.bean.DownLoadView"></beans:bean>
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
 	  <beans:property name="order" value="0"></beans:property>
 	</beans:bean>
@@ -83,7 +83,7 @@
 	
 	<context:component-scan base-package="taehoon.com.sexy" />
 	<context:component-scan base-package="taehoon.com.dao" />
-	<context:component-scan base-package="taehoon.com.Bean" />
+	<context:component-scan base-package="taehoon.com.bean" />
 	
 	
 	
