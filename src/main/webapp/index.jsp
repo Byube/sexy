@@ -42,14 +42,14 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand"><i class="fa fa-magnet"></i></a>
+               <a href="index.jsp" class="navbar-brand"><i class="fa fa-magnet"></i></a>
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Projects</a></li>
-                    <li><a href="about.html">Our Studio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="index.jsp">Projects</a></li>
+                    <li><a href="about.jsp">Our Studio</a></li>
+                    <li><a href="blog.jsp">Blog</a></li>
+                    <li><a href="contact.jsp">Contact</a></li>
                </ul>
           </div>
 
@@ -78,7 +78,7 @@
           <div class="row">
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img1.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -92,7 +92,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img2.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -106,7 +106,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img3.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -120,7 +120,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img4.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -134,7 +134,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img5.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -148,7 +148,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.html">
+                    <a href="single-project.jsp">
                          <div class="portfolio-thumb">
                               <img src="images/portfolio-img6.jpg" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -162,7 +162,7 @@
                </div>
 
                <div class="col-md-12 col-sm-12 text-center">
-                    <h3>hello, if you interest working together. just send message <a href="contact.html">contact page</a></h3>
+                    <h3>hello, if you interest working together. just send message <a href="contact.jsp">contact page</a></h3>
                </div>
 
           </div>
