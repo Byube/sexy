@@ -42,14 +42,14 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand"><i class="fa fa-magnet"></i></a>
+               <a href="index.jsp" class="navbar-brand"><i class="fa fa-magnet"></i></a>
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Projects</a></li>
-                    <li><a href="about.html">Our Studio</a></li>
-                    <li class="active"><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.jsp">Projects</a></li>
+                    <li><a href="about.jsp">Our Studio</a></li>
+                    <li class="active"><a href="blog.jsp">Blog</a></li>
+                    <li><a href="contact.jsp">Contact</a></li>
                </ul>
           </div>
 
@@ -70,12 +70,12 @@
 
                     <div class="blog-post-thumb">
                          <div class="blog-post-image">
-                              <a href="single-post.html">
+                              <a href="single-post.jsp">
                                    <img src="images/blog-image1.jpg" class="img-responsive" alt="Blog Image">
                               </a>
                          </div>
                          <div class="blog-post-title">
-                              <h3><a href="single-post.html">We Help You Create Perfect Modern Design</a></h3>
+                              <h3><a href="single-post.jsp">We Help You Create Perfect Modern Design</a></h3>
                          </div>
                          <div class="blog-post-format">
                               <span><a href="#"><img src="images/author-image1.jpg" class="img-responsive img-circle"> Jen Lopez</a></span>
@@ -84,18 +84,18 @@
                          </div>
                          <div class="blog-post-des">
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                              <a href="single-post.html" class="btn btn-default">Continue Reading</a>
+                              <a href="single-post.jsp" class="btn btn-default">Continue Reading</a>
                          </div>
                     </div>
 
                     <div class="blog-post-thumb">
                          <div class="blog-post-image">
-                              <a href="single-post.html">
+                              <a href="single-post.jsp">
                                    <img src="images/blog-image2.jpg" class="img-responsive" alt="Blog Image">
                               </a>
                          </div>
                          <div class="blog-post-title">
-                              <h3><a href="single-post.html">When do you marry with someone you love in life?</a></h3>
+                              <h3><a href="single-post.jsp">When do you marry with someone you love in life?</a></h3>
                          </div>
                          <div class="blog-post-format">
                               <span><a href="#"><img src="images/author-image2.jpg" class="img-responsive img-circle"> Leo Dennis</a></span>
@@ -104,7 +104,7 @@
                          </div>
                          <div class="blog-post-des">
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                              <a href="single-post.html" class="btn btn-default">Continue Reading</a>
+                              <a href="single-post.jsp" class="btn btn-default">Continue Reading</a>
                          </div>
                     </div>
                </div>
