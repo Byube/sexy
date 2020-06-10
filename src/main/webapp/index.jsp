@@ -216,6 +216,8 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
+<script type="text/javascript" src=" https://code.jquery.com/jquery-3.5.0.min.js"></script>
+ <script type="text/javascript" src="/sexy/js/index.js"></script>
 
 </body>
 </html>
