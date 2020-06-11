@@ -28,7 +28,7 @@
 	<tx:annotation-driven/>
 	<beans:bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
 	    <beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"></beans:property>
-	    <beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></beans:property>
+	    <beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"></beans:property>
 	    <beans:property name="username" value="APPLE"></beans:property>
 	    <beans:property name="password" value="APPLE"></beans:property>
 	    <beans:property name="maxActive" value="30"></beans:property>

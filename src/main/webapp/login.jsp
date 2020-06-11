@@ -98,18 +98,15 @@
 		</div>
 
 	</article>
-    </form>
-
-                    
+    </form>                    
                </div>
-
           </div>
      </div>
 </section>
 
 <!-- Footer Section -->
 
-<footer>
+<footer>  
      <div class="container">
           <div class="row">
 
