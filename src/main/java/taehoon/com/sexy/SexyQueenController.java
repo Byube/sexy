@@ -4,9 +4,9 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import taehoon.com.bean.SexyMemberBean;
 import taehoon.com.dao.TaehoonSexyDao;
 
 @Controller
@@ -16,9 +16,10 @@ public class SexyQueenController {
 	TaehoonSexyDao dao;
 	
 	@RequestMapping(value = "loginFun.vip")
-	public String gogoddd(HttpSession session, String id, String password) {
-		String pass = dao.MemberLoginCheck(id);
-		if(pass.equals(password)) {
+	public String gogoddd(SexyMemberBean smb,String id, String password,HttpSession session) {
+		smb.setId(id);
+		smb.setPassword(password);
+		if(dao.MemberLoginCheck(smb)) {
 			session.setAttribute("id", id);
 			session.setMaxInactiveInterval(300);
 			return "index";

@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration><!-- DB설정(Connection) -->   
     <typeAliases> 
-      
+      <typeAlias type="taehoon.com.bean.SexyMemberBean" alias="smb"/>
       <!--  <typeAlias type="sist.com.dto.BootBoardBean" alias="boot"/> -->    
     </typeAliases> 
     <mappers>
