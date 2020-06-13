@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import taehoon.com.bean.SexyMemberBean;
@@ -16,7 +17,7 @@ public class SexyQueenController {
 	TaehoonSexyDao dao;
 	
 	@RequestMapping(value = "loginFun.vip")
-	public String gogoddd(SexyMemberBean smb,String id, String password,HttpSession session) {
+	public String gogologing(SexyMemberBean smb,String id, String password,HttpSession session) {
 		smb.setId(id);
 		smb.setPassword(password);
 		if(dao.MemberLoginCheck(smb)) {
@@ -25,6 +26,19 @@ public class SexyQueenController {
 			return "index";
 		}
 		return "redirect:login.jsp";
+	}
+	@RequestMapping(value = "checkIdFun.vip")
+	public String CheckIdFun(String id,Model model) {
+		boolean state = false;
+		state = dao.CheckIdFun(id);
+		if(state) {
+			model.addAttribute("check", null);
+			model.addAttribute("id",id);
+		}else {
+			model.addAttribute("check", "ok");
+			model.addAttribute("id",id);			
+		}
+		return "idcheck";
 	}
 
 }

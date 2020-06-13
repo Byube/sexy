@@ -8,6 +8,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM SEXYMEMBER
    WHERE ID=#{id} AND PASSWORD=#{password}
    </select>
+   <select id="CheckInFun" parameterType="java.lang.String" resultType="java.lang.String">
+   SELECT NAME
+   FROM SEXYMEMBER
+   WHERE ID=#{VALUE}
+   </select>
   
 </mapper>
 

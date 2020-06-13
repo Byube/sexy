@@ -11,7 +11,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Magnet - Minimal Portfolio Template</title>
+<title>로그인</title>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -88,10 +88,10 @@
 				
 				<div class="form-group text-center">
 					<button type="button" id="loginsubmit" class="btn btn-primary">
-						로그인<i class="fa fa-check spaceLeft"></i>
+						로그인
 					</button>
-					<button type="button" id="signUp" class="btn btn-warning">
-						회원가입<i class="fa fa-times spaceLeft"></i>
+					<button type="button" id="signUp" class="btn btn-warning" onclick="location.href='joinMemBer.jsp'" >
+						회원가입
 					</button>
 				</div>
 			

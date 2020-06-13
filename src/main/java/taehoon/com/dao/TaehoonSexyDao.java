@@ -21,6 +21,10 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 		String name = this.getSqlSession().selectOne("MemberLoginCheck", smb);
 	    return (name==null)?false:true;
 	}
+	public boolean CheckIdFun(String id) {
+	   String name = this.getSqlSession().selectOne("CheckInFun", id);
+	   return (name==null)?false:true;
+	}
 	
 	
 }
