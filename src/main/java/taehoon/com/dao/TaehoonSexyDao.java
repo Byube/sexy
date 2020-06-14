@@ -25,6 +25,9 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 	   String name = this.getSqlSession().selectOne("CheckInFun", id);
 	   return (name==null)?false:true;
 	}
+	public void insertMember(SexyMemberBean smb) {
+		this.getSqlSession().insert("insertMember", smb);
+	}
 	
 	
 }

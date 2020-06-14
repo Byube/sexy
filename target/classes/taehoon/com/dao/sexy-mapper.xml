@@ -13,6 +13,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM SEXYMEMBER
    WHERE ID=#{VALUE}
    </select>
+   
+   <insert id="insertMember" parameterType="smb">
+   INSERT INTO SEXYMEMBER VALUES(
+   #{id},#{name},#{nickname},#{password},#{gender},#{tel},#{birthdate},#{email},#{address})   
+   </insert>
   
 </mapper>
 

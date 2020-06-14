@@ -16,6 +16,10 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 
+<!-- Datepicker css -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
@@ -68,7 +72,7 @@
      
                          <div class="blog-comment-form">
                               <h3>회원가입</h3>
-                                   <form action="#" name="rfrm" method="post">
+                                   <form action="/sexy/joinFun.vip" name="joinSubmit" method="post">
                                         <strong>ID</strong><br>
                                         <input type="text" class="form-control" readonly="readonly" placeholder="아이디를 입력하세요" id="idC" name="id" required>
                                         <strong>이름</strong><br>                                        
@@ -76,7 +80,7 @@
                                         <strong>닉네임</strong><br>
                                         <input type="text" class="form-control" placeholder="닉네임을 입력하세요" id="nickname" name="nickname" required>
                                         <strong>비밀번호</strong><br>
-                                        <input type="password" class="form-control" placeholder="비밀번호를 입력하세요" id="password" name="password1" required>
+                                        <input type="password" class="form-control" placeholder="비밀번호를 입력하세요" id="password" name="password" required>
                                         <strong>비밀번호 확인</strong><br>
                                         <input type="password" class="form-control" placeholder="비밀번호 확인" id="passwordCheck" name="password2" required>
                                         <font id="chkNotice"></font>
@@ -94,6 +98,7 @@
                                         <input type="text" placeholder="연락처를 입력하세요" name="tel1" id="tels">&nbsp&nbsp-&nbsp&nbsp
                                         <input type="text" placeholder="연락처를 입력하세요" name="tel2" id="tels">&nbsp&nbsp-&nbsp&nbsp
                                         <input type="text" placeholder="연락처를 입력하세요" name="tel3" id="tels">
+                                        <input type="hidden" name="tel">
                                         <br><br><br>
                                         <strong>이메일</strong><br>
                                          <input type="text" placeholder="Email" name="email1" id="email1" required>@
@@ -106,20 +111,28 @@
                                             <option value="hotmail.com">hotmail.com</option>
                                             <option value="nate.com">nate.com</option>                                     
                                          </select>
+                                         <input type="hidden" name="email">
                                          <br><br>
                                          <strong>주소</strong><br>
-                                         <input type="text" name="post1" class="inputText" size="10"  readonly="readonly" /> - <input type="text" name="post2" class="inputText" size="10"  readonly="readonly"/> <span class="buttonFuc"><a href="#" id="sendPost">우편번호</a></span>
-                                         <br>
-					                     <input type="text" name="address1" class="inputText" size="50" readonly="readonly" />
-					                     <input type="text" name="address2" class="inputText" size="50" placeholder="상세 주소를 입력하세요" />
-					                     <input type="hidden" name="address"/>
+                                         
+                                        <input type="text" id="sample4_postcode" placeholder="우편번호" readonly="readonly" name="postnum">
+                                        <a id="sendPost"><input type="button"  value="우편번호 찾기"></a>
+                                        <br>
+                                        <input type="text" id="sample4_roadAddress" placeholder="도로명주소" size="50" readonly="readonly" name="roadaddr">                                 
+                                        <input type="text" id="sample4_jibunAddress" placeholder="지번주소" size="50" readonly="readonly" name="numaddr">
+                                        <br>
+                                        <span id="guide" style="color:#999;display:none"></span>
+                                        <input type="text" id="sample4_detailAddress" placeholder="상세주소" size="50" name="detailaddr">
+                                        <input type="text" id="sample4_extraAddress"  placeholder="참고항목" size="50" readonly="readonly">
+					                    <input type="hidden" name="address">
+					                     
 					                     <br><br>
                                          <strong>생년월일</strong><br>
                                          <input readonly="readonly" name="birthdate" type="text" id="datepicker1">
                                          
                                         <br><br><br><br><br>
                                         <div class="col-md-3 col-sm-4">
-                                             <input type="submit" class="form-control" value="회원가입">
+                                             <input type="submit" name="send" class="form-control" value="회원가입">
                                         </div>
                                    </form>
                          </div>
@@ -176,8 +189,11 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
+ <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src=" https://code.jquery.com/jquery-3.5.0.min.js"></script>
  <script type="text/javascript" src="/sexy/js/joinMember.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
 </html>
