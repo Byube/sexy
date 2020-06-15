@@ -11,7 +11,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Magnet - Minimal Portfolio Template</title>
+<title>Footer</title>
 
 <link rel="stylesheet" href="/sexy/css/bootstrap.min.css">
 <link rel="stylesheet" href="/sexy/css/font-awesome.min.css">

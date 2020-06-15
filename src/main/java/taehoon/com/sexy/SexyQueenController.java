@@ -50,5 +50,10 @@ public class SexyQueenController {
 		model.addAttribute("test", "https://www.stylenanda.com/product/detail.html?product_no=247174&cate_no=182&display_group=1");
 		return"shoppingView";
 	}
+	@RequestMapping(value = "logoutFun.vip")
+	public String logoutAction(HttpSession session) {
+		session.invalidate();
+		return "redirect:index.jsp";
+	}
 
 }

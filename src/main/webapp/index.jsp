@@ -135,7 +135,9 @@
                </div>
 
                <div class="col-md-12 col-sm-12 text-center">
-                    <h3>hello, if you interest working together. just send message <a href="contact.jsp">contact page</a></h3>
+                    <h3>Shop Now! 
+                    <!-- <a href="contact.jsp">contact page</a> -->
+                    </h3>
                </div>
 
           </div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Magnet - Minimal Portfolio Template</title>
+<title>Navigation</title>
 
 <link rel="stylesheet" href="/sexy/css/bootstrap.min.css">
 <link rel="stylesheet" href="/sexy/css/font-awesome.min.css">
@@ -46,12 +47,21 @@ ul{
 <div class="navbar navbar-default navbar-static-top" role="navigation">
        <nav id="top_nav" class="navbar navbar-expand-sm bg-light">
           <ul class="navbar-nav">
+            <c:choose>
+             <c:when test="${id eq null }">
              <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/sexy/login.jsp">Login</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" href="/sexy/joinMemBer.jsp">Sign Up</a>
              </li>
+             </c:when>
+             <c:otherwise>
+              <li class="nav-item">
+                <a class="nav-link" href="/sexy/logoutFun.vip">LogOut</a>
+              </li>
+             </c:otherwise>             
+             </c:choose>
              <li class="nav-item">
                 <a class="nav-link" href="#">Cart</a>
              </li>
