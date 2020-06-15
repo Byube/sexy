@@ -42,7 +42,6 @@ public class SexyQueenController {
 	}
 	@RequestMapping(value = "joinFun.vip")
 	public String joinMemberFun(SexyMemberBean smb) {
-		System.out.println(smb);
 		dao.insertMember(smb);
 		return "redirect:login.jsp";
 	}
