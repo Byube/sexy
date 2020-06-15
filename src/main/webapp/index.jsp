@@ -53,7 +53,7 @@
                <div class="col-md-4 col-sm-6">
                     <a href="/sexy/test.vip">
                          <div class="portfolio-thumb">
-                              <img src="/sexy/img/1.webp" class="img-responsive" alt="Portfolio">
+                              <img src="/sexy/images/1.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
                                         <div class="portfolio-item">
                                              <h3>사선웨이스트 크로싱데님PT (이효리 착용)</h3>
@@ -67,7 +67,7 @@
                <div class="col-md-4 col-sm-6">
                     <a href="single-project.jsp">
                          <div class="portfolio-thumb">
-                              <img src="/sexy/img/2.webp" class="img-responsive" alt="Portfolio">
+                              <img src="/sexy/images/2.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
                                         <div class="portfolio-item">
                                              <h3>빌드로고자수 슬림하프T</h3>
@@ -81,7 +81,7 @@
                <div class="col-md-4 col-sm-6">
                     <a href="single-project.jsp">
                          <div class="portfolio-thumb">
-                              <img src="/sexy/img/3.webp" class="img-responsive" alt="Portfolio">
+                              <img src="/sexy/images/3.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
                                         <div class="portfolio-item">
                                              <h3>셔링레이아웃 코튼백리본탑</h3>

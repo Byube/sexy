@@ -21,14 +21,7 @@
 <link rel="stylesheet" href="/sexy/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
 <style type="text/css">
-ul{
-	list-style: none;
-}
-	nav#top_nav{
-		float: right;
-		top: -50px;
-		right: 350px;
-	}
+
 		
 </style>
 </head>
@@ -45,28 +38,25 @@ ul{
 <!-- Navigation section  -->
 
 <div class="navbar navbar-default navbar-static-top" role="navigation">
-       <nav id="top_nav" class="navbar navbar-expand-sm bg-light">
-          <ul class="navbar-nav">
-            <c:choose>
-             <c:when test="${id eq null }">
-             <li class="nav-item">
-                <a class="nav-link" href="/sexy/login.jsp">Login</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="/sexy/joinMemBer.jsp">Sign Up</a>
-             </li>
-             </c:when>
-             <c:otherwise>
-              <li class="nav-item">
-                <a class="nav-link" href="/sexy/logoutFun.vip">LogOut</a>
-              </li>
-             </c:otherwise>             
-             </c:choose>
-             <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
-             </li>
-          </ul>
-       </nav>
+
+       <div class="container">
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                 <c:choose>
+                   <c:when test="${id eq null }">
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="joinMemBer.jsp">Sign Up</a></li>
+                   </c:when>
+                   <c:otherwise>
+                    <li><a href="/sexy/logoutFun.vip">Logout</a></li>
+                   </c:otherwise>
+                 </c:choose>
+                    <li><a href="#">Cart</a></li>
+                   
+               </ul>
+          </div>
+
+     </div>
        
        
        
@@ -75,8 +65,8 @@ ul{
 
           <div class="navbar-header">
                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar">1</span>
-                    <span class="icon icon-bar">2</span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
                <a href="index.jsp" class="navbar-brand">
@@ -93,7 +83,7 @@ ul{
                </ul>
           </div>
 
-  </div>
+     </div>
 </div>
 
 <!-- SCRIPTS -->

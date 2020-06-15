@@ -28,7 +28,7 @@
 
 <!-- Blog Section -->
 
-
+<button>장바구니추가</button>
 <iframe src="${test }" style="width:95%; height:800px;" />
 
 
