@@ -19,7 +19,17 @@
 <!-- Main css -->
 <link rel="stylesheet" href="/sexy/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
-
+<style type="text/css">
+ul{
+	list-style: none;
+}
+	nav#top_nav{
+		float: right;
+		top: -50px;
+		right: 350px;
+	}
+		
+</style>
 </head>
 <body>
 
@@ -34,12 +44,29 @@
 <!-- Navigation section  -->
 
 <div class="navbar navbar-default navbar-static-top" role="navigation">
+       <nav id="top_nav" class="navbar navbar-expand-sm bg-light">
+          <ul class="navbar-nav">
+             <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#">Cart</a>
+             </li>
+          </ul>
+       </nav>
+       
+       
+       
+       
      <div class="container">
 
           <div class="navbar-header">
                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar">1</span>
+                    <span class="icon icon-bar">2</span>
                     <span class="icon icon-bar"></span>
                </button>
                <a href="index.jsp" class="navbar-brand">
@@ -49,7 +76,7 @@
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.jsp">Projects</a></li>
+                    <li class="active"><a href="index.jsp">Main</a></li>
                     <li><a href="about.jsp">Our Studio</a></li>
                     <li><a href="blog.jsp">Blog</a></li>
                     <li><a href="contact.jsp">Contact</a></li>

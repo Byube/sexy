@@ -35,12 +35,13 @@
                </div>
 
                <div class="col-md-4 col-sm-4">
-                    <p>124 Market Street, Suite 3570 San Francisco, CA 3042 United States</p>
+                    <p>Name : Jeff Kim</p>
+                    <p>Age  : 30</p>
                </div>
 
                <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-3">
-                    <p><a href="mailto:youremail@gmail.com">hello@yourstudio.co</a></p>
-                    <p>(+01) 2048937 / 02 203403</p>
+                    <p><a href="mailto:youremail@gmail.com">kangjunne@naver.com</a></p>
+                    <p>(+82) 010 - 4084 - 0619</p>
                </div>
 
                <div class="clearfix col-md-12 col-sm-12">
@@ -49,7 +50,7 @@
 
                <div class="col-md-6 col-sm-6">
                     <div class="footer-copyright">
-                         <p>© 2016 Magnet Studio | All Rights Reserved.</p>
+                         <p>© 2020 Sharp# | All Rights Reserved.</p>
                     </div>
                </div>
 

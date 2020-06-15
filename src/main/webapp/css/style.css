@@ -91,7 +91,6 @@ a:hover, a:active, a:focus {
   box-sizing: border-box;
 }
 
-#portfolio,
 #about,
 #blog,
 #contact,
@@ -99,6 +98,9 @@ a:hover, a:active, a:focus {
 #blog-single-post {
   padding-top: 80px;
   padding-bottom: 120px;
+}
+#portfolio{
+	 padding-bottom: 120px;
 }
 
 .section-title {
@@ -263,8 +265,8 @@ a:hover, a:active, a:focus {
      align-items: center;
     position: relative;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 40px;
+  /* padding-top: 60px;
+    padding-bottom: 40px; */
 }
 
 #home hr {

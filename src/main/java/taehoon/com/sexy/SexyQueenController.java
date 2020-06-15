@@ -45,5 +45,10 @@ public class SexyQueenController {
 		dao.insertMember(smb);
 		return "redirect:login.jsp";
 	}
+	@RequestMapping(value = "test.vip")
+	public String test1(Model model) {
+		model.addAttribute("test", "https://www.stylenanda.com/product/detail.html?product_no=247174&cate_no=182&display_group=1");
+		return"shoppingView";
+	}
 
 }

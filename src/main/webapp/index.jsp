@@ -51,7 +51,7 @@
           <div class="row">
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.jsp">
+                    <a href="/sexy/test.vip">
                          <div class="portfolio-thumb">
                               <img src="/sexy/img/1.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
