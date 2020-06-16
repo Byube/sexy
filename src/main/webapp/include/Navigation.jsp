@@ -20,10 +20,7 @@
 <!-- Main css -->
 <link rel="stylesheet" href="/sexy/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
-<style type="text/css">
 
-		
-</style>
 </head>
 <body>
 
@@ -50,8 +47,11 @@
                    <c:otherwise>
                     <li><a href="/sexy/logoutFun.vip">Logout</a></li>
                    </c:otherwise>
-                 </c:choose>
+                 </c:choose>           
                     <li><a href="#">Cart</a></li>
+                 <c:if test="${id eq 'admin'}">
+                    <li><a href="#">Admin Page</a></li>
+                 </c:if>
                    
                </ul>
           </div>
