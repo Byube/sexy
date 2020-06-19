@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Component;
 
+import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
 
 @Component
@@ -28,6 +29,12 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 	public void insertMember(SexyMemberBean smb) {
 		this.getSqlSession().insert("insertMember", smb);
 	}
-	
+	public void insertSexyCom(SexyCompanyBean scb) {
+		this.getSqlSession().insert("insertSexyCom", scb);
+	}
+	public boolean CheckCnameFun(String ccname) {
+		String ctel = this.getSqlSession().selectOne("CheckCnameFun", ccname);
+		return (ctel==null)?false:true;		
+	}	
 	
 }

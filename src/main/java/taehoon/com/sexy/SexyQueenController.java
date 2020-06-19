@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
 import taehoon.com.dao.TaehoonSexyDao;
 
@@ -55,5 +56,29 @@ public class SexyQueenController {
 		session.invalidate();
 		return "redirect:index.jsp";
 	}
+	@RequestMapping(value = "insertCom.vip")
+	public String insertCompanyFun(SexyCompanyBean scb) {
+		dao.insertSexyCom(scb);
+		return "insertcompany";
+	}
+	@RequestMapping(value = "checkCnameFun.vip")
+	public String CheckCnameFun(String ccname, Model model) {
+		boolean state = false; 
+		state = dao.CheckCnameFun(ccname);
+		if(state){ 
+			model.addAttribute("check", null);
+		    model.addAttribute("id", ccname); 
+		}else{ 
+			model.addAttribute("check", "ok");
+		    model.addAttribute("id", ccname); 
+	    }		 
+		return "nameCheck";
+	}
 
+	
+	
+	
+		
+	
+	
 }

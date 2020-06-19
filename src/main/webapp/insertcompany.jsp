@@ -13,11 +13,11 @@
 
 <title>Insert Company</title>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="/sexy/css/bootstrap.min.css">
+<link rel="stylesheet" href="/sexy/css/font-awesome.min.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/sexy/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
 
 </head>
@@ -29,58 +29,32 @@
 <!-- Blog Section -->
 
 <section id="blog">
-     <div class="container">
+        <div class="container">
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <div class="section-title">
-                         <h3>lastest Blogs</h3>
-                         <h2>The creative web & mobile studio and focused on brand identity, web development and social marketing.</h2>
-                    </div>
-
-                    <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="single-post.jsp">
-                                   <img src="images/blog-image1.jpg" class="img-responsive" alt="Blog Image">
-                              </a>
-                         </div>
-                         <div class="blog-post-title">
-                              <h3><a href="single-post.jsp">We Help You Create Perfect Modern Design</a></h3>
-                         </div>
-                         <div class="blog-post-format">
-                              <span><a href="#"><img src="images/author-image1.jpg" class="img-responsive img-circle"> Jen Lopez</a></span>
-                              <span><i class="fa fa-date"></i> Jan 30, 2016</span>
-                              <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span>
-                         </div>
-                         <div class="blog-post-des">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                              <a href="single-post.jsp" class="btn btn-default">Continue Reading</a>
+                    <div class="blog-single-post-thumb">
+     
+                         <div class="blog-comment-form">
+                              <h3>업체추가</h3>
+                                   <form action="/sexy/insertCom.vip" name="submit" method="post">
+                                        <strong>업체명</strong><br>
+                                        <input type="text" class="form-control" placeholder="업체명을 입력하세요" readonly="readonly" id="cname" name="cname" required>
+                                        <strong>연락처</strong><br>
+                                        <input type="text" placeholder="연락처를 입력하세요" name="tel1" id="tels">&nbsp&nbsp-&nbsp&nbsp
+                                        <input type="text" placeholder="연락처를 입력하세요" name="tel2" id="tels">&nbsp&nbsp-&nbsp&nbsp
+                                        <input type="text" placeholder="연락처를 입력하세요" name="tel3" id="tels">
+                                        <input type="hidden" id="ctel" name="ctel">
+                                        <br><br><br><br>
+                                        <div class="col-md-3 col-sm-4">
+                                             <input type="button" name="send" class="form-control" value="업체추가">
+                                        </div>
+                                   </form>
                          </div>
                     </div>
-
-                    <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="single-post.jsp">
-                                   <img src="images/blog-image2.jpg" class="img-responsive" alt="Blog Image">
-                              </a>
-                         </div>
-                         <div class="blog-post-title">
-                              <h3><a href="single-post.jsp">When do you marry with someone you love in life?</a></h3>
-                         </div>
-                         <div class="blog-post-format">
-                              <span><a href="#"><img src="images/author-image2.jpg" class="img-responsive img-circle"> Leo Dennis</a></span>
-                              <span><i class="fa fa-date"></i> November 22, 2016</span>
-                              <span><a href="#"><i class="fa fa-comment-o"></i> 23 Comments</a></span>
-                         </div>
-                         <div class="blog-post-des">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                              <a href="single-post.jsp" class="btn btn-default">Continue Reading</a>
-                         </div>
-                    </div>
-               </div>
-
           </div>
      </div>
+   </div>
 </section>
 
 <!-- Footer Section include -->
@@ -89,9 +63,11 @@
 
 <!-- SCRIPTS -->
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="/sexy/js/jquery.js"></script>
+<script src="/sexy/js/bootstrap.min.js"></script>
+<script src="/sexy/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script type="text/javascript" src="/sexy/js/insertCom.js"></script>
 
 </body>
 </html>
