@@ -67,10 +67,10 @@ public class SexyQueenController {
 		state = dao.CheckCnameFun(ccname);
 		if(state){ 
 			model.addAttribute("check", null);
-		    model.addAttribute("id", ccname); 
+		    model.addAttribute("cname", ccname); 
 		}else{ 
 			model.addAttribute("check", "ok");
-		    model.addAttribute("id", ccname); 
+		    model.addAttribute("cname", ccname); 
 	    }		 
 		return "nameCheck";
 	}

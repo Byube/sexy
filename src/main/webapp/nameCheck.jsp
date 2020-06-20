@@ -36,7 +36,7 @@
      <tr>
         <td>&nbsp;</td>
         <td height="60" align="center" style="padding: 10 ">
-          입력하신 업체 <strong>${id }</strong>은 이미 추가하셨습니다.
+          입력하신 업체 <strong>${cname }</strong>은 이미 추가하셨습니다.
           <p>다른 업체를 추가해 주세요 </p></td>
         <td>&nbsp;</td>
       </tr>  
@@ -45,8 +45,8 @@
       <tr>
         <td>&nbsp;</td>
         <td height="60" align="center" style="padding: 10 ">
-         입력하신 업체 <strong>${id }</strong>은 처음 등록하시는 업체 입니다.
-           <p id="pid"><a href="#" id="cccchere" name="${id}">여기를 Click하세요</a></p></td>
+         입력하신 업체 <strong>${cname }</strong>은 처음 등록하시는 업체 입니다.
+           <p id="pid"><a href="#" id="cccchere" name="${cname}">여기를 Click하세요</a></p></td>
         <td>&nbsp;</td>
       </tr>  
 </c:otherwise>   
