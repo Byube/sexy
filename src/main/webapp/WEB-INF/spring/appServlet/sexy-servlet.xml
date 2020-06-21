@@ -66,10 +66,13 @@
 	<aop:config>
 	  <aop:advisor advice-ref="txAdvice" pointcut="execution(public * taehoon.com.dao.*.*(..))"/>
 	</aop:config>
+	
 	<beans:bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
 	    <beans:property value="UTF-8" name="defaultEncoding"/>
-	    <beans:property value="3000000000" name="maxUploadSize"/>
+	    <beans:property value="200000000" name="maxInMemorySize"/>
+	    <beans:property value="200000000" name="maxUploadSize"/>
     </beans:bean>
+    
 	<beans:bean id="download" class="taehoon.com.bean.DownLoadView"></beans:bean>
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
 	  <beans:property name="order" value="0"></beans:property>
@@ -79,6 +82,7 @@
 	<beans:property name="order" value="1"/>
 		<beans:property name="prefix" value="/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="contentType" value="text/html; charset=UTF-8"/>
 	</beans:bean>
 	
 	<context:component-scan base-package="taehoon.com.sexy" />

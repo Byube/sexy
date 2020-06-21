@@ -22,6 +22,11 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 		String name = this.getSqlSession().selectOne("MemberLoginCheck", smb);
 	    return (name==null)?false:true;
 	}
+	public boolean ComLoginCheck(SexyCompanyBean scb){
+		String name = this.getSqlSession().selectOne("ComLoginCheck", scb);
+	    return (name==null)?false:true;
+	}
+	
 	public boolean CheckIdFun(String id) {
 	   String name = this.getSqlSession().selectOne("CheckInFun", id);
 	   return (name==null)?false:true;
@@ -36,5 +41,9 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 		String ctel = this.getSqlSession().selectOne("CheckCnameFun", ccname);
 		return (ctel==null)?false:true;		
 	}	
+	public boolean CheckComIdFun(String id) {
+		   String name = this.getSqlSession().selectOne("CheckComIdFun", id);
+		   return (name==null)?false:true;
+    }
 	
 }

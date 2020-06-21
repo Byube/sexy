@@ -8,6 +8,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM SEXYMEMBER
    WHERE ID=#{id} AND PASSWORD=#{password}
    </select>
+   
+   <select id="ComLoginCheck" parameterType="scb" resultType="java.lang.String">
+   SELECT CNAME
+   FROM SEXYCOMPANY
+   WHERE CID=#{cid} AND CPASSWORD=#{cpassword}
+   </select>
+   
    <select id="CheckInFun" parameterType="java.lang.String" resultType="java.lang.String">
    SELECT NAME
    FROM SEXYMEMBER
@@ -29,6 +36,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM SEXYCOMPANY
    WHERE CNAME=#{VALUE}
    </select>
+   <select id="CheckComIdFun" parameterType="java.lang.String" resultType="java.lang.String">
+   SELECT CNAME
+   FROM SEXYCOMPANY
+   WHERE CID=#{VALUE}
+   </select>
+   
    
 </mapper>
 

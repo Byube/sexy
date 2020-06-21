@@ -40,10 +40,10 @@
                                    <form action="/sexy/insertCom.vip" name="submit" method="post">
                                         <strong>ID</strong>
                                         <br>
-                                        <input type="text" class="form-control" readonly="readonly" placeholder="아이디를 입력하세요" id="idC" name="id" required>
+                                        <input type="text" class="form-control" readonly="readonly" placeholder="아이디를 입력하세요" id="cid" name="cid" required>
                                         <strong>비밀번호</strong>
                                         <br>
-                                        <input type="password" class="form-control" placeholder="비밀번호를 입력하세요" id="password" name="password" required>
+                                        <input type="password" class="form-control" placeholder="비밀번호를 입력하세요" id="cpassword" name="cpassword" required>
                                         <strong>비밀번호 확인</strong>
                                         <br>
                                         <input type="password" class="form-control" placeholder="비밀번호 확인" id="passwordCheck" name="password2" required>
@@ -58,7 +58,7 @@
                                         <input type="hidden" id="ctel" name="ctel">
                                         <br>
                                         <strong>업체명</strong><br>
-                                        <input type="file" class="form-control" placeholder="사진을 추가해주세요" id="" name="file" required>
+                                        <input type="file" class="form-control" id="files" name="file" required>
                                         <br><br><br><br>
                                         <div class="col-md-3 col-sm-4">
                                              <input type="button" name="send" class="form-control" value="업체추가">
