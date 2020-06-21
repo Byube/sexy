@@ -16,12 +16,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    
    <insert id="insertMember" parameterType="smb">
    INSERT INTO SEXYMEMBER VALUES(
-   #{id},#{name},#{nickname},#{password},#{gender},#{tel},#{birthdate},#{email},#{address})   
+   #{id},#{name},#{nickname},#{password},#{gender},#{tel},#{birthdate},#{email},#{address},SYSDATE)   
    </insert>
    
    <insert id="insertSexyCom" parameterType="scb">
    INSERT INTO SEXYCOMPANY VALUES(
-   SEXYCOM_SEQ.NEXTVAL,#{cname},#{ctel})
+   SEXYCOM_SEQ.NEXTVAL,#{cid},#{cpassword},#{cname},#{ctel},#{cfilename},SYSDATE)
    </insert>
    
    <select id="CheckCnameFun" parameterType="java.lang.String" resultType="java.lang.String">

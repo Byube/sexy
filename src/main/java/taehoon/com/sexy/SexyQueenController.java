@@ -28,6 +28,16 @@ public class SexyQueenController {
 		}
 		return "redirect:login.jsp";
 	}
+	@RequestMapping(value = "adloginFun.vip")
+	public String adgogoLogin(String id, String password,HttpSession session) {
+		System.out.println(id+" : "+password);
+		
+		/*
+		 * if() { session.setAttribute("id", id); session.setMaxInactiveInterval(300);
+		 * return "index"; }
+		 */
+		return "redirect:login.jsp";
+	}
 	@RequestMapping(value = "checkIdFun.vip")
 	public String CheckIdFun(String id,Model model) {
 		boolean state = false;
@@ -58,7 +68,7 @@ public class SexyQueenController {
 	}
 	@RequestMapping(value = "insertCom.vip")
 	public String insertCompanyFun(SexyCompanyBean scb) {
-		dao.insertSexyCom(scb);
+		//dao.insertSexyCom(scb);
 		return "insertcompany";
 	}
 	@RequestMapping(value = "checkCnameFun.vip")

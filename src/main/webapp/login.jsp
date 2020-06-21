@@ -19,6 +19,8 @@
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
 
 </head>
 <body>
@@ -40,11 +42,19 @@
                          <h2>로그인 하시고 이용하세요</h2>
                     </div>
 
-    <form id="login" name="login" method ="post" action="/sexy/loginFun.vip">
+    <form id="login" name="login" method ="post" >
     <article class="">
 		
 		<div class="col-sm-6 col-md-offset-3">
-			
+			  <div class="section-title">	 
+                  <label class="form-check-label" for="radio1">
+                  <input type="radio" class="form-check-input" id="radio1" name="select" value="고객" checked>고객
+                  </label>
+                  <label class="form-check-label" for="radio2">
+                  <input type="radio" class="form-check-input" id="radio2" name="select" value="업체">업체
+                  </label>
+               </div>
+               <br><br>
 				<div class="form-group">
 					<label for="inputName">ID</label> <input type="text"
 						class="form-control" name="id" id="id" placeholder="아이디를 입력해 주세요">
@@ -86,7 +96,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
 <script type="text/javascript" src=" https://code.jquery.com/jquery-3.5.0.min.js"></script>
- <script type="text/javascript" src="/sexy/js/login.js"></script>
+<script type="text/javascript" src="/sexy/js/login.js"></script>
 
 </body>
 </html>
