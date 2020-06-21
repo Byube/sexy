@@ -1,7 +1,8 @@
 package taehoon.com.sexy;
 
 
-import java.io.FileOutputStream;
+import java.io.File;
+
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -9,9 +10,9 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
@@ -97,32 +98,22 @@ public class SexyQueenController {
 	}
 	//업체 회원가입
 	@RequestMapping(value = "insertCom.vip")
-	public String insertCompanyFun(@RequestParam(value = "file", required = false)MultipartFile file,SexyCompanyBean scb){
-		System.out.println(scb);
-		String location = "C:\\Users\\kangj\\git\\sexy\\src\\main\\webapp\\comLogo\\";
-		FileOutputStream fos=null;
-		String fileName=file.getOriginalFilename();
+	public String insertCompanyFun(SexyCompanyBean scb, MultipartHttpServletRequest mtf) throws Exception{
+		String fileTag = "file"; 
+		String filePath = "C:\\Users\\kangj\\git\\sexy\\src\\main\\webapp\\comLogo\\";
+		MultipartFile file = mtf.getFile(fileTag);
+		String fileName = file.getOriginalFilename();
 		if(fileName.length()>0) {
-			try {
-				fos=new FileOutputStream(location.concat(fileName));
-				fos.write(file.getBytes());
-				scb.setCfilename(fileName);
-			} catch (Exception e) {
-				// TODO: handle exception
-				e.printStackTrace();
-			}finally {
-				try {
-					if(fos!=null)fos.close();
-				} catch (Exception e2) {
-					// TODO: handle exception
-				}
-			}
+		   try {
+			   scb.setCfilename(fileName);
+			   file.transferTo(new File(filePath+fileName));
+		   } catch (Exception e) {
+			   System.out.println("업로드 오류");
+		   }
 		}else {
 			scb.setCfilename("noimg.jpg");
 		}
-		 System.out.println(scb);
-		 // dao.insertSexyCom(scb);
-		 
+		dao.insertSexyCom(scb);		
 		return "redirect:login.jsp";
 	}
 	

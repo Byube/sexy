@@ -47,11 +47,11 @@
 		
 		<div class="col-sm-6 col-md-offset-3">
 			  <div class="section-title">	 
-                  <label class="form-check-label" for="radio1">
-                  <input type="radio" class="form-check-input" id="radio1" name="select" value="고객" checked>고객
+                  <label class="form-check-label" for="radio1" style="font-size: 24px;">
+                  <input type="radio" class="form-check-input" id="radio1" name="select" value="고객" checked>Member
                   </label>
-                  <label class="form-check-label" for="radio2">
-                  <input type="radio" class="form-check-input" id="radio2" name="select" value="업체">업체
+                  <label class="form-check-label" for="radio2" style="font-size: 24px;">
+                  <input type="radio" class="form-check-input" id="radio2" name="select" value="업체">Company
                   </label>
                </div>
                <br><br>
@@ -72,7 +72,7 @@
 					<button type="button" id="loginsubmit" class="btn btn-primary">
 						로그인
 					</button>
-					<button type="button" id="signUp" class="btn btn-warning" onclick="location.href='joinMemBer.jsp'" >
+					<button type="button" id="signUp" class="btn btn-warning" onclick="location.href='choicejoin.jsp'" >
 						회원가입
 					</button>
 				</div>

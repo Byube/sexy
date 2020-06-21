@@ -42,7 +42,7 @@
                  <c:choose>
                    <c:when test="${id eq null }">
                     <li><a href="login.jsp">Login</a></li>
-                    <li><a href="joinMemBer.jsp">Sign Up</a></li>
+                    <li><a href="choicejoin.jsp">Sign Up</a></li>
                    </c:when>
                    <c:otherwise>
                     <li><a href="/sexy/logoutFun.vip">Logout</a></li>

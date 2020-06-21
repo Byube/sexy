@@ -37,7 +37,7 @@
      
                          <div class="blog-comment-form">
                               <h3>업체추가</h3>
-                                   <form action="/sexy/insertCom.vip" name="submit" method="post">
+                                   <form action="/sexy/insertCom.vip" name="submit" method="post" enctype="multipart/form-data">
                                         <strong>ID</strong>
                                         <br>
                                         <input type="text" class="form-control" readonly="readonly" placeholder="아이디를 입력하세요" id="cid" name="cid" required>
@@ -56,12 +56,12 @@
                                         <input type="text" placeholder="연락처를 입력하세요" name="tel2" id="tels">&nbsp&nbsp-&nbsp&nbsp
                                         <input type="text" placeholder="연락처를 입력하세요" name="tel3" id="tels">
                                         <input type="hidden" id="ctel" name="ctel">
-                                        <br>
-                                        <strong>업체명</strong><br>
-                                        <input type="file" class="form-control" id="files" name="file" required>
+                                        <br><br>
+                                        <strong>업체로고</strong><br><br>
+                                        <input type="file" name="file">
                                         <br><br><br><br>
                                         <div class="col-md-3 col-sm-4">
-                                             <input type="button" name="send" class="form-control" value="업체추가">
+                                             <input type="button" class="form-control" name="send" class="form-control" value="업체추가">
                                         </div>
                                    </form>
                          </div>
