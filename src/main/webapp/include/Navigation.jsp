@@ -77,6 +77,7 @@
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.jsp">Main</a></li>
+                    <li><a href="/sexy/prolist.vip">List</a></li>
                     <li><a href="about.jsp">Our Studio</a></li>
                     <li><a href="blog.jsp">Blog</a></li>
                     <li><a href="contact.jsp">Contact</a></li>

@@ -10,6 +10,7 @@ public class SexyProductBean {
 	private String pcategory;
 	private String purl;
 	private String pfilename;
+	private int phit;
 	private String pdate;
 	public int getPno() {
 		return pno;
@@ -65,6 +66,12 @@ public class SexyProductBean {
 	public void setPfilename(String pfilename) {
 		this.pfilename = pfilename;
 	}
+	public int getPhit() {
+		return phit;
+	}
+	public void setPhit(int phit) {
+		this.phit = phit;
+	}
 	public String getPdate() {
 		return pdate;
 	}
@@ -75,8 +82,9 @@ public class SexyProductBean {
 	public String toString() {
 		return "SexyProductBean [pno=" + pno + ", cno=" + cno + ", pname=" + pname + ", pprice=" + pprice + ", pcolor="
 				+ pcolor + ", pqty=" + pqty + ", pcategory=" + pcategory + ", purl=" + purl + ", pfilename=" + pfilename
-				+ ", pdate=" + pdate + "]";
+				+ ", phit=" + phit + ", pdate=" + pdate + "]";
 	}
+	
 	
 
 }

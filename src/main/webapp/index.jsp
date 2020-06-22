@@ -11,13 +11,13 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Magnet - Minimal Portfolio Template</title>
+<title>Index</title>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="/sexy/css/bootstrap.min.css">
+<link rel="stylesheet" href="/sexy/css/font-awesome.min.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/sexy/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
 
 </head>
@@ -51,7 +51,7 @@
           <div class="row">
 
                <div class="col-md-4 col-sm-6">
-                    <a href="/sexy/test.vip">
+                    <a href="#">
                          <div class="portfolio-thumb">
                               <img src="/sexy/images/1.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -65,7 +65,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.jsp">
+                    <a href="#">
                          <div class="portfolio-thumb">
                               <img src="/sexy/images/2.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -79,7 +79,7 @@
                </div>
 
                <div class="col-md-4 col-sm-6">
-                    <a href="single-project.jsp">
+                    <a href="#">
                          <div class="portfolio-thumb">
                               <img src="/sexy/images/3.webp" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
@@ -150,9 +150,9 @@
 
 <!-- SCRIPTS -->
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="/sexy/js/jquery.js"></script>
+<script src="/sexy/js/bootstrap.min.js"></script>
+<script src="/sexy/js/custom.js"></script>
 <script type="text/javascript" src=" https://code.jquery.com/jquery-3.5.0.min.js"></script>
  <script type="text/javascript" src="/sexy/js/index.js"></script>
 

@@ -8,6 +8,7 @@ public class SexyCompanyBean {
 	private String ctel;
 	private String cfilename;
 	private String cdate;
+	
 	public int getCno() {
 		return cno;
 	}

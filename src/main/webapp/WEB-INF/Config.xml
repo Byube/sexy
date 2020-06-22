@@ -6,7 +6,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     <typeAliases> 
       <typeAlias type="taehoon.com.bean.SexyMemberBean" alias="smb"/>
       <typeAlias type="taehoon.com.bean.SexyCompanyBean" alias="scb"/>
-      <!--  <typeAlias type="sist.com.dto.BootBoardBean" alias="boot"/> -->    
+      <typeAlias type="taehoon.com.bean.SexyProductBean" alias="spb"/>
+          
     </typeAliases> 
     <mappers>
       <mapper resource="taehoon/com/dao/sexy-mapper.xml"/>

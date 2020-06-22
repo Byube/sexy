@@ -2,7 +2,8 @@ package taehoon.com.sexy;
 
 
 import java.io.File;
-
+import java.util.HashMap;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -16,6 +17,8 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
+import taehoon.com.bean.SexyProductBean;
+import taehoon.com.bean.SexyProductTest;
 import taehoon.com.dao.TaehoonSexyDao;
 
 @Controller
@@ -44,11 +47,19 @@ public class SexyQueenController {
 		if(dao.ComLoginCheck(scb)) {
 			session.setAttribute("id", id);
 			session.setMaxInactiveInterval(600);
-			return "insertproduct";
+			return "redirect:insertProgogo.vip";
 		}
 		return "redirect:login.jsp";
 	}
 	//고객 아이디 중복 체크
+	
+	@RequestMapping(value = "insertProgogo.vip")
+	public String insertProductFun(HttpSession session, Model model) {
+		String id =(String)session.getAttribute("id");
+		model.addAttribute("cno", dao.selectCno(id));
+		return "insertproduct";
+	}
+	
 	@RequestMapping(value = "checkIdFun.vip")
 	public String CheckIdFun(String id,Model model) {
 		boolean state = false;
@@ -116,16 +127,52 @@ public class SexyQueenController {
 		dao.insertSexyCom(scb);		
 		return "redirect:login.jsp";
 	}
+	//제품추가
+	@RequestMapping(value = "productGoGo.vip")
+	public String productGoGoFun(SexyProductTest test,MultipartHttpServletRequest mtf) throws Exception{		
+	    SexyProductBean spb = new SexyProductBean(); 
 	
-	@RequestMapping(value = "test.vip")
-	public String test1(Model model) {
-		model.addAttribute("test", "https://www.stylenanda.com/product/detail.html?product_no=247174&cate_no=182&display_group=1");
+	    spb.setCno(Integer.parseInt(test.getCno()));		 
+	    spb.setPname(test.getPname());
+	    spb.setPprice(Integer.parseInt(test.getPprice()));
+	    spb.setPcolor(test.getPcolor());
+	    spb.setPqty(Integer.parseInt(test.getPqty()));
+	    spb.setPcategory(test.getPcategory());
+	    spb.setPurl(test.getPurl());
+	    
+	    String fileTag = "file"; 
+		String filePath = "C:\\Users\\kangj\\git\\sexy\\src\\main\\webapp\\productImg\\";
+		MultipartFile file = mtf.getFile(fileTag);
+		String fileName = file.getOriginalFilename();
+		if(fileName.length()>0) {
+		   try {
+			   spb.setPfilename(fileName);
+			   file.transferTo(new File(filePath+fileName));
+		   } catch (Exception e) {
+			   System.out.println("업로드 오류");
+		   }
+		}	    
+		System.out.println(spb);
+	    dao.insertProFun(spb);
+		return "redirect:insertProgogo.vip";
+	}
+	
+	
+	@RequestMapping(value = "showInfo.vip")
+	public String test1(Model model,String url) {
+		model.addAttribute("test", url);
 		return"shoppingView";
 	}
 	@RequestMapping(value = "logoutFun.vip")
 	public String logoutAction(HttpSession session) {
 		session.invalidate();
 		return "redirect:index.jsp";
+	}
+	@RequestMapping(value = "prolist.vip")
+	public String showProlistFun(Model model) {
+		HashMap<String, Object>map = new HashMap<String, Object>();
+		model.addAttribute("plist", dao.selectPro(map));
+		return "prolist";
 	}
 	
 	

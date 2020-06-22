@@ -36,11 +36,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM SEXYCOMPANY
    WHERE CNAME=#{VALUE}
    </select>
+   
    <select id="CheckComIdFun" parameterType="java.lang.String" resultType="java.lang.String">
    SELECT CNAME
    FROM SEXYCOMPANY
    WHERE CID=#{VALUE}
    </select>
+   
+   <select id="selectCno" parameterType="java.lang.String" resultType="java.lang.Integer">
+   SELECT CNO
+   FROM SEXYCOMPANY
+   WHERE CID=#{VALUE}
+   </select>
+   
+   <insert id="insertProFun" parameterType="spb">
+   INSERT INTO SEXYPRODUCT VALUES(
+   SEXYPRO_SEQ.NEXTVAL,#{cno},#{pname},#{pprice},#{pcolor},#{pqty},#{pcategory},#{purl},#{pfilename},0,SYSDATE)
+   </insert>
+   
+   <select id="selectPro" resultType="spb" parameterType="java.util.HashMap">
+   SELECT PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE	
+   FROM SEXYPRODUCT
+   </select>
+   
    
    
 </mapper>

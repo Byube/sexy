@@ -1,5 +1,8 @@
 package taehoon.com.dao;
 
+import java.util.HashMap;
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
+import taehoon.com.bean.SexyProductBean;
 
 @Component
 public class TaehoonSexyDao extends SqlSessionDaoSupport{
@@ -45,5 +49,15 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 		   String name = this.getSqlSession().selectOne("CheckComIdFun", id);
 		   return (name==null)?false:true;
     }
+	public List<SexyProductBean> selectPro(HashMap<String, Object>map){
+		return this.getSqlSession().selectList("selectPro", map);
+	}
+	public int selectCno(String id) {
+		return this.getSqlSession().selectOne("selectCno", id);
+	}
+	public void insertProFun(SexyProductBean spb) {
+		this.getSqlSession().insert("insertProFun", spb);
+	}
+	
 	
 }
