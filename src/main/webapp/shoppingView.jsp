@@ -27,9 +27,10 @@
 <jsp:include page="/include/Navigation.jsp"></jsp:include>
 
 <!-- Blog Section -->
-
+<div class="container">
 <button>장바구니추가</button>
-<iframe src="${test }" style="width:95%; height:800px;" />
+</div>
+<iframe src="${url }" style="width:97%; height:750px;" />
 
 
 <!-- Footer Section include -->

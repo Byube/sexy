@@ -45,7 +45,7 @@ public class SexyQueenController {
 		scb.setCid(id);
 		scb.setCpassword(password);
 		if(dao.ComLoginCheck(scb)) {
-			session.setAttribute("id", id);
+			session.setAttribute("cid", id);
 			session.setMaxInactiveInterval(600);
 			return "redirect:insertProgogo.vip";
 		}
@@ -55,7 +55,7 @@ public class SexyQueenController {
 	
 	@RequestMapping(value = "insertProgogo.vip")
 	public String insertProductFun(HttpSession session, Model model) {
-		String id =(String)session.getAttribute("id");
+		String id =(String)session.getAttribute("cid");
 		model.addAttribute("cno", dao.selectCno(id));
 		return "insertproduct";
 	}
@@ -160,7 +160,7 @@ public class SexyQueenController {
 	
 	@RequestMapping(value = "showInfo.vip")
 	public String test1(Model model,String url) {
-		model.addAttribute("test", url);
+		model.addAttribute("url", url);
 		return"shoppingView";
 	}
 	@RequestMapping(value = "logoutFun.vip")
