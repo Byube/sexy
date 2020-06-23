@@ -51,6 +51,7 @@
                     <li><a href="#">Cart</a></li>
                  <c:if test="${cid ne null}">
                     <li><a href="/sexy/insertProgogo.vip">Add Product</a></li>
+                    <li><a href="#">My Page</a></li>
                  </c:if>
                    
                </ul>

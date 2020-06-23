@@ -55,8 +55,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    </insert>
    
    <select id="selectPro" resultType="spb" parameterType="java.util.HashMap">
-   SELECT PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE	
+   SELECT RM, PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE
+   FROM 
+   (SELECT ROWNUM RM, PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE
+   FROM
+   (SELECT PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE	
    FROM SEXYPRODUCT
+   ORDER BY PNO ASC))
+   WHERE RM BETWEEN #{start} AND #{end}
+   </select>
+   
+   <select id="getTotalList" resultType="int" parameterType="HashMap">
+   SELECT COUNT(*) FROM SEXYPRODUCT
+     <where>
+       <if test="query!=null and data!=null">
+         ${query} LIKE '%'||#{data}||'%'
+       </if>
+     </where>
    </select>
    
    

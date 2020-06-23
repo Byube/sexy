@@ -49,7 +49,7 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 		   String name = this.getSqlSession().selectOne("CheckComIdFun", id);
 		   return (name==null)?false:true;
     }
-	public List<SexyProductBean> selectPro(HashMap<String, Object>map){
+	public List<Object> selectPro(HashMap<String, Object>map){
 		return this.getSqlSession().selectList("selectPro", map);
 	}
 	public int selectCno(String id) {
@@ -58,6 +58,8 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 	public void insertProFun(SexyProductBean spb) {
 		this.getSqlSession().insert("insertProFun", spb);
 	}
-	
+	public int getTotalList(HashMap<String, Object>map) {
+		return this.getSqlSession().selectOne("getTotalList", map);
+	}
 	
 }

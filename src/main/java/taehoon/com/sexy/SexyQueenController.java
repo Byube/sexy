@@ -4,8 +4,9 @@ package taehoon.com.sexy;
 import java.io.File;
 import java.util.HashMap;
 
-
+import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import taehoon.com.bean.PagingBean;
 import taehoon.com.bean.SexyCompanyBean;
 import taehoon.com.bean.SexyMemberBean;
 import taehoon.com.bean.SexyProductBean;
@@ -26,6 +28,8 @@ public class SexyQueenController {
 	
 	@Inject
 	TaehoonSexyDao dao;
+	@Resource
+	PagingBean page;
 	
 	//고객 로그인
 	@RequestMapping(value = "loginFun.vip")
@@ -169,9 +173,8 @@ public class SexyQueenController {
 		return "redirect:index.jsp";
 	}
 	@RequestMapping(value = "prolist.vip")
-	public String showProlistFun(Model model) {
-		HashMap<String, Object>map = new HashMap<String, Object>();
-		model.addAttribute("plist", dao.selectPro(map));
+	public String showProlistFun(HttpSession session,HttpServletRequest request,Model model) {
+		page.makeProcess(session,request, model);
 		return "prolist";
 	}
 	
