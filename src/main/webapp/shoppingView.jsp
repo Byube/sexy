@@ -30,7 +30,8 @@
 <div class="container">
 <button>장바구니추가</button>
 </div>
-<iframe src="${url }" style="width:97%; height:750px;" />
+
+<iframe src="${url }" width="97%" height="750" name="mainframe"/>
 
 
 <!-- Footer Section include -->
@@ -44,6 +45,8 @@
 <script src="js/custom.js"></script>
 <script type="text/javascript" src=" https://code.jquery.com/jquery-3.5.0.min.js"></script>
 <script type="text/javascript"></script>
+
+
 
 </body>
 </html>
