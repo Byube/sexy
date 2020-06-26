@@ -58,9 +58,9 @@ public class SexyQueenController {
 	//고객 아이디 중복 체크
 	
 	@RequestMapping(value = "insertProgogo.vip")
-	public String insertProductFun(HttpSession session, Model model) {
+	public String insertProductFun(HttpSession session) {
 		String id =(String)session.getAttribute("cid");
-		model.addAttribute("cno", dao.selectCno(id));
+		session.setAttribute("cno", dao.selectCno(id));
 		return "insertproduct";
 	}
 	
@@ -161,21 +161,37 @@ public class SexyQueenController {
 		return "redirect:insertProgogo.vip";
 	}
 	
-	
+	//제품 url 통하여 info 보여주기 
 	@RequestMapping(value = "showInfo.vip")
 	public String test1(Model model,String url) {
 		model.addAttribute("url", url);
 		return"shoppingView";
 	}
+	
+	//로그아웃
 	@RequestMapping(value = "logoutFun.vip")
 	public String logoutAction(HttpSession session) {
 		session.invalidate();
 		return "redirect:index.jsp";
 	}
+	//제품 리스트를 보여주기 페이징 포함 
 	@RequestMapping(value = "prolist.vip")
 	public String showProlistFun(HttpSession session,HttpServletRequest request,Model model) {
-		page.makeProcess(session,request, model);
+		String action="pro";
+		page.makeProcess(request, model, action);
 		return "prolist";
+	}
+	
+	//업체별 업데이트 제품 보여주기 
+	@RequestMapping(value = "showMyPro.vip")
+	public String showMyProFun(HttpSession session,HttpServletRequest request,Model model) {		
+		String id =(String)session.getAttribute("cid");
+		String data = request.getParameter("data");
+		String query = request.getParameter("query");
+		String action = "com";
+		page.makeProcess(request, model, action);
+		model.addAttribute("clist", dao.selectComFun(id));
+		return "comlist";
 	}
 	
 	

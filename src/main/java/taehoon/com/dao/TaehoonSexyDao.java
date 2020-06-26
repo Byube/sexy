@@ -61,5 +61,8 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 	public int getTotalList(HashMap<String, Object>map) {
 		return this.getSqlSession().selectOne("getTotalList", map);
 	}
+	public List<SexyCompanyBean> selectComFun(String id){
+		return this.getSqlSession().selectList("selectComFun", id);
+	}
 	
 }

@@ -49,6 +49,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    WHERE CID=#{VALUE}
    </select>
    
+   <select id="selectComFun" parameterType="java.lang.String" resultType="scb">
+   SELECT CNO,CID,CPASSWORD,CNAME,CTEL,CFILENAME,CDATE
+   FROM SEXYCOMPANY	
+   WHERE CID=#{VALUE}
+   </select>
+   
    <insert id="insertProFun" parameterType="spb">
    INSERT INTO SEXYPRODUCT VALUES(
    SEXYPRO_SEQ.NEXTVAL,#{cno},#{pname},#{pprice},#{pcolor},#{pqty},#{pcategory},#{purl},#{pfilename},0,SYSDATE)
@@ -61,6 +67,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    FROM
    (SELECT PNO,CNO,PNAME,PPRICE,PCOLOR,PQTY,PCATEGORY,PURL,PFILENAME,PHIT,PDATE	
    FROM SEXYPRODUCT
+     <where>
+       <if test="query!=null and data!=null">
+         ${query} LIKE '%'||#{data}||'%'
+       </if>
+     </where>
    ORDER BY PNO ASC))
    WHERE RM BETWEEN #{start} AND #{end}
    </select>
