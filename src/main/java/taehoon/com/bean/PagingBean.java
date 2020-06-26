@@ -53,43 +53,43 @@ public class PagingBean {
 	    model.addAttribute("plist", list);
 	    
 	    if(action.equals("pro")) {
-	    	vip="prolist.vip";
+	    	vip="prolist.vip?";
 	    }else if(action.equals("com")) {
-	    	vip="showMyPro.vip?query="+query+"&data="+data;
+	    	vip="showMyPro.vip?query="+query+"&data="+data+"&";
 	    }
 	    
 	    sb.delete(0, sb.length());
 	    sb.append("<ul class=\"pagination\">");
 	    
-	    sb.append("<li><a href=\""+vip+"?page=1\">처음</a></li>");
+	    sb.append("<li><a href=\""+vip+"page=1\">처음</a></li>");
 	    //이전 블록 
 	    if(currentBlock>1) {
-	    sb.append("<li><a href=\""+vip+"?page="+(startPage-1)+"\">이전</a></li>");
+	    sb.append("<li><a href=\""+vip+"page="+(startPage-1)+"\">이전</a></li>");
 	    }else {
 	    sb.append("<li><a href=\"#\">이전</a></li>"); 	
 	    }
 	    //전 페이지
 	    if(currentPage>1) {
-	    	sb.append("<li><a href=\""+vip+"?page="+(currentPage-1)+"\">Before</a></li>");
+	    	sb.append("<li><a href=\""+vip+"page="+(currentPage-1)+"\">Before</a></li>");
 	    }
 	    //숫자 클릭
 	    for(int i=startPage;i<=endPage;i++) {
 	       if(currentPage!=i)
-	       sb.append("<li><a href=\""+vip+"?page="+i+"\">"+(i)+"</a></li>");
+	       sb.append("<li><a href=\""+vip+"page="+i+"\">"+(i)+"</a></li>");
 	       else
 	       sb.append("<li class=\"active\"><a href=\"#\">"+(i)+"</a></li>");   
 	    }	    
 	    //다음페이지
 	    if(currentPage<totalPage) {
-	    	sb.append("<li><a href=\""+vip+"?page="+(currentPage+1)+"\">Next</a></li>");
+	    	sb.append("<li><a href=\""+vip+"page="+(currentPage+1)+"\">Next</a></li>");
 	    }
 	    // 다음 블럭
 	    if(totalPage > endPage) {
-	    	sb.append("<li><a href=\""+vip+"?page="+endPage+1+"\">다음</a></li>");
+	    	sb.append("<li><a href=\""+vip+"page="+endPage+1+"\">다음</a></li>");
 	    }else {
 	    	sb.append("<li><a href=\"#\">다음</a></li>");
 	    }
-	    sb.append("<li><a href=\""+vip+"?page="+totalPage+"\">마지막</a></li>");
+	    sb.append("<li><a href=\""+vip+"page="+totalPage+"\">마지막</a></li>");
 	    
 	    sb.append("</ul>");
 	    
