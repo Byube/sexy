@@ -50,8 +50,7 @@
                          </c:forEach>
                          <div class="blog-post-title">
                               <h2>Product Check and Modify</h2>
-                              <input type="text" value="비밀번호를 입력 하세요" id="delpass" name="checkpass">
-                              <input type="button" class="btn btn-danger" id="delpass" name="delbutton">
+                              
                          </div>
                          <br><br>
                          <c:forEach var="p" items="${plist }" varStatus="cn">
@@ -60,7 +59,8 @@
                                         <div class="media-object pull-left">
                                              <img src="/sexy/productImg/${p.pfilename }" class="img-responsive img-circle" alt="Blog Image">
                                         </div>
-                                        <div class="media-body">                                             
+                                        <div class="media-body">                 
+                                        <form action="" method="post">                            
                                              <table class="table table-bordered">
                                                 <thead>
                                                   <tr>
@@ -82,8 +82,10 @@
                                                     <td class="comlist">
                                                     <button type="button" class="btn btn-info" name="mod" id="${p.pno }">수정</button>
                                                     <button type="button" class="btn btn-danger" name="del" id="${p.pno }">삭제</button>
+                                                    <input type="password" placeholder="비밀번호를 입력하세요" id="delpass" name="${p.pno }">                                                   
                                                     </td>                                                 
-                                                  </tr>                                                  
+                                                  </tr>
+                                                                                                 
                                                   <tr lang="${p.pno }" style="display: none;">
                                                     <td class="comlist">${cn.count }</td>
                                                     <td class="comlist"><input type="text" value="${p.pname }" id="${p.pno }" name="pname"/></td>
@@ -116,7 +118,8 @@
                                                     </td>                                                 
                                                   </tr>
                                                 </tbody>
-                                             </table>                                            
+                                             </table> 
+                                            </form>                                            
                                         </div>
                                    </div>                                   
                          </div>                        

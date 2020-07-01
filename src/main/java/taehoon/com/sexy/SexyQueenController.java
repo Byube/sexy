@@ -194,6 +194,15 @@ public class SexyQueenController {
 		return "comlist";
 	}
 	
+	//상품 삭제 
+	@RequestMapping(value = "deletePro.vip")
+	public String deleteProFun(int no,HttpSession session) {
+		String id =(String)session.getAttribute("cid");
+		int cno = dao.selectCno(id);
+		dao.deletePro(no);
+		return "redirect:showMyPro.vip?query=CNO&data="+cno;
+	}
+	
 	
 	
 	

@@ -85,6 +85,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      </where>
    </select>
    
+   <select id="getdbPassWord" parameterType="java.lang.Integer" resultType="java.lang.String">
+     SELECT CPASSWORD
+     FROM SEXYCOMPANY
+     WHERE CNO=#{VALUE}
+   </select>
+   <delete id="deletePro" parameterType="java.lang.Integer">
+   	DELETE FROM SEXYPRODUCT 
+   	WHERE PNO=#{VALUE}
+   </delete>
    
    
 </mapper>

@@ -64,5 +64,11 @@ public class TaehoonSexyDao extends SqlSessionDaoSupport{
 	public List<SexyCompanyBean> selectComFun(String id){
 		return this.getSqlSession().selectList("selectComFun", id);
 	}
+	public String getdbPassWord(int no) {
+		return this.getSqlSession().selectOne("getdbPassWord", no);
+	}
+	public void deletePro(int no) {
+		this.getSqlSession().delete("deletePro", no);
+	}
 	
 }
