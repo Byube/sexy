@@ -194,6 +194,16 @@ public class SexyQueenController {
 		return "comlist";
 	}
 	
+	//삭제 수정 확인
+	@RequestMapping(value = "delormod.vip")
+	public String delOrmodFun(int no, String action) {
+		if(action.equals("del")) {
+			return "redirect:deletePro.vip?no="+no;
+		}else {
+			return "redirect:updatePro.vip?no="+no;
+		}
+	}
+	
 	//상품 삭제 
 	@RequestMapping(value = "deletePro.vip")
 	public String deleteProFun(int no,HttpSession session) {
@@ -203,8 +213,15 @@ public class SexyQueenController {
 		return "redirect:showMyPro.vip?query=CNO&data="+cno;
 		
 	}
-	
-	
+	//상품 수정
+	@RequestMapping(value = "updatePro.vip")
+	public String updateProFun(int no,HttpSession session) {
+		String id =(String)session.getAttribute("cid");
+		int cno = dao.selectCno(id);
+		
+		return "redirect:showMyPro.vip?query=CNO&data="+cno;
+		
+	}
 	
 	
 

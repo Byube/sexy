@@ -1,13 +1,13 @@
-function actionFun(pno,action){
+function actionFun(pno,password,action){
 	$.ajax({
 		url:"/sexy/delpasschek.vip",
 		dataType:"json",
 		type:"GET",
-		data:{no:pno,pass:action},
+		data:{no:pno,pass:password},
 		success:function(v){
 			if(v.state=='true'){
 				alert(pno+"번 글이 삭제 되었습니다.");
-				document.location.href="/sexy/deletePro.vip?no="+pno;
+				document.location.href="/sexy/delormod.vip?no="+pno+"&action="+action;
 			}else{
 				alert("비번이 틀렸습니다.");
 			}
@@ -25,7 +25,7 @@ $(function(){
 		
 		if($(this).text()=='DEL'){
 			var pass = $("input[name='"+id+"']").val();
-			actionFun(id,pass);
+			actionFun(id,pass,"del");
 			$("input#delpass").hide();
 		}else{
 			$("input#delpass").val("");

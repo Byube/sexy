@@ -21,7 +21,7 @@ public class SexyBossAjaxController {
 	public Map<String, String> deleteProFun(int no,String pass,HttpSession session) {
 		String id =(String)session.getAttribute("cid");
 		Map<String, String>map = new HashMap<String, String>();		
-		String dbPass = dao.getdbPassWord(dao.selectCno(id));		
+		String dbPass = dao.getdbPassWord(dao.selectCno(id));
 		map.put("state", String.valueOf(dbPass!=null&&dbPass.equals(pass)));
 		return map;
 	}
