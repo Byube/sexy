@@ -22,8 +22,6 @@ public class SexyBossAjaxController {
 		String id =(String)session.getAttribute("cid");
 		Map<String, String>map = new HashMap<String, String>();		
 		String dbPass = dao.getdbPassWord(dao.selectCno(id));		
-		System.out.println(pass+no);
-		System.out.println(dbPass.equals(pass));
 		map.put("state", String.valueOf(dbPass!=null&&dbPass.equals(pass)));
 		return map;
 	}

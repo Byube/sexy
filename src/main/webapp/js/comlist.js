@@ -24,7 +24,7 @@ $(function(){
 		var id = this.id;	
 		
 		if($(this).text()=='DEL'){
-			var pass = $("input#delpass").val();
+			var pass = $("input[name='"+id+"']").val();
 			actionFun(id,pass);
 			$("input#delpass").hide();
 		}else{

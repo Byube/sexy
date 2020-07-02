@@ -201,6 +201,7 @@ public class SexyQueenController {
 		int cno = dao.selectCno(id);
 		dao.deletePro(no);
 		return "redirect:showMyPro.vip?query=CNO&data="+cno;
+		
 	}
 	
 	
